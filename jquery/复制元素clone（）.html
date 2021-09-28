@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>复制元素</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					$("body").append($("p").clone());
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>二月春风似剪刀</p>
+		<button type="button">复制p元素，然后追加到body元素</button>
+	</body>
+</html>

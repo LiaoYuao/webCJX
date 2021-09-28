@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>替换元素</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					$("<li>苹果爱上鸭梨</li>").replaceAll("li:eq(0)");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>锄禾日当午</li>
+			<li>汗滴禾下土</li>
+			<li>谁知盘中餐</li>
+			<li>粒粒皆辛苦</li>
+		</ul>
+		<button>替换HTML元素</button>
+	</body>
+</html>

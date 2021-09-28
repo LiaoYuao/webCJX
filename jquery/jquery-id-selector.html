@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery id 选择器</title>
+		<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 90px;
+				float: left;
+				padding: 5px;
+				margin: 5px;
+				background-color: #eeeeee;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test0">
+			<p>id=test0</p>
+			<p>选中</p>
+		</div>
+		<div id="test1">
+			<p>id=test0</p>
+			<p>选中</p>
+		</div>
+		<div id="test2">
+			<p>id=test2</p>
+			<p>未选中</p>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var div=document.getElementById("test0");
+	div.style.border ="3px solid blue";
+	</script>
+<script>
+	$("#test1").css("border","3px solid red");
+</script>

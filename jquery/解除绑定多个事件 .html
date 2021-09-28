@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>解除绑定多个事件</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#btn').bind("click",function(){
+					$("#test").append("<p>我绑定的函数1</p>")
+				});
+				$('#btn').bind("click",function(){
+					$("#test").append("<p>我绑定的函数2</p>")
+				});
+				$('#btn').bind("click",function(){
+					$("#test").append("<p>我绑定的函数3</p>")
+				});
+				//事件解绑
+				$('#delAll').click(function(){
+					$('#btn').unbind('click');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击我</button>
+		<button id="delAll">删除所有事件</button>
+		<div id="test"></div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>解除绑定其中一个事件</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//首先需要为这些匿名函数指定一个变量,然后即可单独删除某一个事件;
+			// 将下面三个匿名函数分别命名为myFun1,myFun2,myFun3.
+			$(function(){
+				$('#btn').bind("click",myFun1=function(){
+					$("#test").append("<p>我绑定的函数1</p>")
+				});
+				$('#btn').bind("click",myFun2=function(){
+					$("#test").append("<p>我绑定的函数2</p>")
+				});
+				$('#btn').bind("click",myFun3=function(){
+					$("#test").append("<p>我绑定的函数3</p>")
+				});
+				//事件解绑
+				$('#delTwo').click(function(){
+					$('#btn').unbind('click',myFun2);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击我</button>
+		<button id="delTwo">删除第二个事件</button>
+		<div id="test"></div>
+	</body>
+</html>

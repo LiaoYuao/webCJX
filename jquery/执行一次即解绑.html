@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>执行一次即解绑</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//jQuery提供了一种简写方法--one();该方法为元素绑定处理函数
+			// 当函数触发一次后,立即被删除
+			$(function(){
+				$('#btn').one("click",function(){
+					$("#test").append("<p>我绑定的函数1</p>");
+				}).one("click",function(){
+					$("#test").append("<p>我绑定的函数2</p>");
+				}).one("click",function(){
+					$("#test").append("<p>我绑定的函数3</p>");
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击我</button>
+		<div id="test"></div>
+	</body>
+</html>

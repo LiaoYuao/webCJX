@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>阻止默认行为</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function(){
+				$('#sub').click(function(event){
+					var username=$("#username").val();
+					if(username==""){
+						$('#msg').html("<p>文本框值不能为空</p>");
+						// event.preventDefault();
+						return false;
+						// event.preventDefault()阻止默认行为;
+						// return fasle 可以阻止事件冒泡和默认行为
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form action="test.html">
+			用户名:<input type="text" id="username">
+			<input type="submit" value="提交" id="sub">
+		</form>
+		<div id="msg"></div>
+	</body>
+</html>

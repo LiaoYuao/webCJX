@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>插入与移除HTML元素</title>
+		<script type="text/javascript" src="jquery-3.6.0.min.js">
+		</script>
+		<script>
+			$(document).ready(
+			
+			function(){
+				$("#btn1").click(
+				function(){
+					$("ol").append("<li>追加目录</li>");
+				});
+				$("#btn2").click(
+				function(){
+					$("li:last").remove();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<ol>
+			<li>目录1</li>
+			<li>目录2</li>
+			<li>目录3</li>
+		</ol>
+		<button type="button" id="btn1">添加目录</button>
+		<button id="btn2">删除目录</button>
+	</body>
+</html>

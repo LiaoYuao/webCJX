@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>submit()</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				$("input").change(function(){
+					alert("文本已修改");
+				});
+				
+			})
+		</script>
+	</head>
+	<body>
+		<form action="">
+		输入你的姓名: 	<input type="text" value=""><br>
+		<input type="submit" value="提交">
+		</form>
+		<p>在文本框里输入文字，然后按下enter或点击输入框外部;change事件仅用于文本及textare和select</p>
+	</body>
+</html>

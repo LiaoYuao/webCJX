@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>submit()</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				$("form").submit(function(){
+					alert("提交");
+				});
+				
+			})
+		</script>
+	</head>
+	<body>
+		<form action="">
+		输入你的姓名: 	<input type="text"><br>
+		<input type="submit" value="提交">
+		</form>
+	</body>
+</html>
