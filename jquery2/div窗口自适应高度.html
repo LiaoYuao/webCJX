@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>div高度自窗口适应</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.header{
+				height: 100px;
+				line-height: 100px;
+				background: #abcdef;
+			}
+			.content{
+				margin-top: 10px;
+				overflow: hidden;
+			}
+			.left{
+				width: 20%;
+				height: 100%;
+				background-color: #ABCDEF;
+				float: left;
+			}
+			.right{
+				width: 80%;
+				height: 100%;
+				background-color: #ABCDEF;
+				float: right;
+			}
+			
+		</style>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function setHeight(){
+				var winh=$(window).height();
+				$('.left').css("height",winh-110+"px");
+			}
+			$(function(){
+				setHeight();
+			})
+		</script>
+	</head>
+	<body>
+		<div class="header">Header</div>
+		<div class="content">
+				<div class="left">Left</div>
+				<div class="right">right</div>
+			</div>
+		
+	</body>
+</html>

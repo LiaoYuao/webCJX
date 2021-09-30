@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>标签属性操作</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					alert($('p').attr("title"));
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<p title="标签p的属性">锄禾日当午</p>
+		<button>显示title的属性</button>
+	</body>
+</html>
