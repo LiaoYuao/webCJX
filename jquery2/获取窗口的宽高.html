@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>获取窗口宽高</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var winw=$(window).width();
+				var winh=$(window).height();
+				alert("窗口宽："+winw+"窗口高："+winh);
+			
+			});
+		</script>
+		<style>
+			#div1{
+				width: 500px;
+				height: 721px;
+				border: 5px solid orange;
+				padding: 20px;
+				margin: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

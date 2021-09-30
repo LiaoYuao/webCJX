@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>元素的宽高</title>
+		<script src="jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// with()innerWidth()outerWidth()元素的内容宽带/内边距+内容/内边距+内容+边框
+			// height()\innerHeight\outerHeight 同上
+			$(function(){
+				var w=$("#div1").width();
+				var h=$("#div1").height();
+				var w=innerw=$("#div1").innerWidth();
+				var innerh=$("#div1").innerHeight();
+				var outerw=$("#div1").outerWidth();
+				var outerh=$("#div1").outerHeight();
+				alert("width()="+w+":height()="+h);
+				alert("innerwidth()="+innerw+":innerheight()="+innerh);
+				alert("outerwidth()="+outerw+":outerheight()="+outerh);
+			
+			});
+		</script>
+		<style>
+			#div1{
+				width: 500px;
+				height: 300px;
+				border: 5px solid orange;
+				padding: 20px;
+				margin: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>
